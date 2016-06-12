@@ -1,0 +1,12 @@
+mpeg1video
+mpeg2video
+mpeg4
+h264
+hevc
+wmv1
+wmv2
+theora
+flv1
+flashsv
+vp8
+vp9

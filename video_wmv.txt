@@ -1,0 +1,8 @@
+wmv1
+wmv2
+mpeg4
+h264
+theora
+mpeg2video
+flv1
+flashsv
