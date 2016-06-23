@@ -108,6 +108,7 @@ ffmpge_work ()
             cmd+="-i $media"
             [ x$duration != x ] && cmd+=" -t $duration "
             cmd+=" -map v:0 "
+            cmd+=" -an "
             cmd+=" -c:v $codec "
 
             if [ $codec == "h263" ]; then 
@@ -119,7 +120,7 @@ ffmpge_work ()
             [ x$bitrate != x ] && cmd+=" -b:v $bitrate "
 
             # output file
-            cmd+=" $out_dir/`echo $codec`_`echo $duration`s_`echo $wxh`_`echo $bitrate`.$fmt"
+            cmd+=" $out_dir/`basename $media`_`echo $codec`_`echo $duration`s_`echo $wxh`_`echo $bitrate`.$fmt"
             echo "echo \"$cmd\"" >> $run
             echo "$cmd" >> $run
 

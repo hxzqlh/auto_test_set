@@ -134,6 +134,7 @@ ffmpge_work ()
             cmd+="-i $ff_media"
             [ x$ff_duration != x ] && cmd+=" -t $ff_duration "
             cmd+=" -map a:0 "
+            cmd+=" -vn "
             cmd+=" -c:a $codec "
 
             [ x$ff_smp_rate != x ] && cmd+=" -ar $ff_smp_rate "
@@ -143,7 +144,7 @@ ffmpge_work ()
             # for some experimental codecs
             cmd+=" -strict -2"
 
-            cmd+=" $ff_out_dir/`echo $codec`_`echo $ff_duration`s_`echo $ff_smp_rate`_`echo $ff_ch_num`_`echo $ff_bitrate`.$fmt"
+            cmd+=" $ff_out_dir/`basename $media`_`echo $codec`_`echo $ff_duration`s_`echo $ff_smp_rate`_`echo $ff_ch_num`_`echo $ff_bitrate`.$fmt"
             echo "echo \"$cmd\"" >> $run
             echo "$cmd" >> $run
 

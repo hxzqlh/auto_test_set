@@ -66,3 +66,6 @@ Linux／Mac OS X ，且系统已预装好 ffmpeg，建议下载官网最新版�
 * 要生成的图片格式记录在 `image.txt` 文件中，每一行按照 `wxh` 的格式配置好要生成的图片分辨率。
 
 
+## 参考
+
+* https://en.wikipedia.org/wiki/Video_file_format
